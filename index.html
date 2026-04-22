@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Explore Cameron Highlands: A nature lover's paradise with tea plantations and cool mountain air.">
+    <meta name="keywords" content="Cameron Highlands, Malaysia, travel, nature, tea plantations">
+    
+    <title>Home - Cameron Highlands</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Cameron Highlands</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Explore Cameron Highlands</h2>
+            <p>Cameron Highlands is a popular tourist destination due to its natural beauty and unique attractions.</p>
+            <p>It is a must-visit destination for nature lovers and adventure seekers planning to travel to South East Asia.</p>
+            <p>Cameron Highlands boasts an array of lush green landscapes, cool temperatures, and fertile soil, making it perfect for tea plantations and agricultural farm stays.</p>
+            <p>The best time to travel to Cameron Highlands is November because the average temperature is around 15°C to 23°C.</p>
+            
+            <img src="hero.jpg" alt="Scenic view of Cameron Highlands" width="300">
+            <img src="cameron1.jpg" alt="Scenic view of Cameron Highlands" width="300">
+        </section>
+        <section>
+            <h2>Why Visit?</h2>
+            <p>From rolling tea plantations to misty forests, Cameron Highlands offers a refreshing retreat from city life.</p>
+            <p>Nestled in the mountains of Pahang, Malaysia, Cameron Highlands is a breathtaking destination known for its cool climate, lush tea plantations, and vibrant strawberry farms.</p>
+            
+            <p><p>For more details, visit <a href="https://www.tourism.gov.my/" target="_blank">Tourism Malaysia</a> or <a href="contact.html">Contact Our Team</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Travel Explorer. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.onload = () => {
+            alert("Welcome to Cameron Highlands - A Nature's Paradise!");
+        };
+
+        function customPrompt(message, callback) {
+            const modal = document.createElement("div");
+            modal.className = "custom-modal";
+            const modalContent = document.createElement("div");
+            modalContent.className = "custom-modal-content";
+            const modalText = document.createElement("p");
+            modalText.textContent = message;
+            const input = document.createElement("input");
+            input.type = "text";
+            const submitButton = document.createElement("button");
+            submitButton.textContent = "Submit";
+
+            modalContent.appendChild(modalText);
+            modalContent.appendChild(input);
+            modalContent.appendChild(submitButton);
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+
+            submitButton.addEventListener("click", () => {
+                const response = input.value;
+                document.body.removeChild(modal);
+                if (callback) callback(response);
+            });
+        }
+
+         // Use the custom prompt
+        customPrompt("Enter your favorite season (spring/summer/autumn/winter):", (season) => {
+            switch (season?.toLowerCase()) {
+                case "spring":
+                    alert("Perfect time for flower gardens!");
+                    break;
+                case "summer":
+                    alert("Cool off with refreshing mountain air!");
+                    break;
+                case "autumn":
+                    alert("Enjoy the tea plantations at their best!");
+                    break;
+                case "winter":
+                    alert("Cozy up with some fresh strawberries!");
+                    break;
+                default:
+                    alert("Cameron Highlands is beautiful year-round!");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the beautiful landscapes of Cameron Highlands through our photo gallery.">
+    <meta name="keywords" content="Gallery, Photos, Tea Plantation, Mossy Forest, Cameron Highlands">
+    <title>Gallery - Cameron Highlands</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Scenic Landscapes</h2>
+            <p>Click on the images below to learn more about each famous attraction.</p>
+            
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <h3>Tea Plantation</h3>
+                    <a href="teaplant.html">
+                        <img src="bohteaplantation-1.jpg" alt="Boh Tea Plantation" class="gallery-thumb">
+                    </a>
+                </div>
+
+                <div class="gallery-item">
+                    <h3>Mossy Forest</h3>
+                    <a href="mossy_forest.html">
+                        <img src="cameron-highland-mossy1.jpg" alt="Mossy Forest" class="gallery-thumb">
+                    </a>
+                </div>
+
+                <div class="gallery-item">
+                    <h3>Strawberry Farm</h3>
+                    <a href="strawberry.html">
+                        <img src="Mountain-Strawberry-Farm2.jpg" alt="Strawberry Farm" class="gallery-thumb">
+                    </a>
+                </div>
+
+                <div class="gallery-item">
+                    <h3>Lavender Garden</h3>
+                    <a href="Lavender_garden.html">
+                        <img src="LavenderG.jpg" alt="Lavender Garden" class="gallery-thumb">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Travel Explorer. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Log interaction for analytics
+        const images = document.querySelectorAll('.gallery-thumb');
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                console.log("Viewing attraction: " + img.alt);
+            });
+        });
+    </script>
+</body>
+</html>
